@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS people_db;
+
+CREATE DATABASE people_db;
+
+

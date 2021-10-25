@@ -1,0 +1,19 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "Command line based application to track and query employees",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Philip Browning",
+  "license": "MIT",
+  "dependencies": {
+    "ascii-art": "^2.8.5",
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.8.0"
+  }
+}
