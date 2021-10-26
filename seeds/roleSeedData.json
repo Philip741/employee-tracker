@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Manager",
+        "salary": 110000
+    },
+    {
+        "title": "Engineer",
+        "salary": 80000
+    },
+    {
+        "title": "Operations",
+        "salary": 65000
+    },
+    {
+        "title": "Security Engineer",
+        "salary": 80000
+    }
+]
