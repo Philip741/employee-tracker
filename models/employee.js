@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
 class Employee extends Model {}
 
 Employee.init (
@@ -12,10 +13,12 @@ Employee.init (
    },
    first_name: {
         type: DataTypes.STRING,
+        len: [1,30],
         allowNull: false,
    }, 
    last_name: {
         type: DataTypes.STRING,
+        len: [1,30],
         allowNull: false,
    }, 
 },
