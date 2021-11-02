@@ -1,26 +1,19 @@
 const sequelize = require('../config/connection');
-const Employee = require('../models/employee');
-const Role = require('../models/role');
-const Department = require('../models/department');
+const db = require("../models");
 
 const emplSeedData = require('./employeeSeedData.json');
 const deptSeedData = require('./deptSeedData.json');
 const roleSeedData = require('./roleSeedData.json');
 
-const seedDatabase = () => {
-    return sequelize.sync({
+const seedDatabase = async () => {
+    await db.sequelize.sync({
       force: true
     })
-    .then(() => {
-      Employee.bulkCreate(emplSeedData)
-      Role.bulkCreate(roleSeedData)
-      Department.bulkCreate(deptSeedData)
-        .then(() => {
-          console.log('All Seeds Planted');
-        });
-      });
-
+    await db.departments.bulkCreate(deptSeedData);
+    await db.roles.bulkCreate(roleSeedData);
+    await db.employees.bulkCreate(emplSeedData);
+      
     process.exit(0);
   };
-  
-  seedDatabase();
+
+seedDatabase()
