@@ -1,4 +1,3 @@
-
 module.exports = (sequelize, DataTypes) => {
     const Departments = sequelize.define("departments",  { 
           id: {
