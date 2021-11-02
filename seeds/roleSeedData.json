@@ -1,17 +1,31 @@
 [
     {
-        "title": "Manager",
+        "department_id": "1",
+        "title": "HR Manager",
         "salary": 110000
     },
     {
+        "department_id": 1,
+        "title": "HR specialist",
+        "salary": 70000
+    },
+    {
+        "department_id": 2,
         "title": "Engineer",
         "salary": 80000
     },
     {
+        "department_id": 2,
+        "title": "Infrastructure Engineer",
+        "salary": 90000
+    },
+    {
+        "department_id": 3,
         "title": "Operations",
         "salary": 65000
     },
     {
+        "department_id": 4,
         "title": "Security Engineer",
         "salary": 80000
     }
