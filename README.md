@@ -9,7 +9,6 @@
 
 [contribution](#contribution)
 
-[testing](#testing)
 
 [username](#username)
 
@@ -22,10 +21,21 @@
    ## Instructions
    Clone the repo 
    ## Usage
+   The install would consist of cloning the repository. 
+
+   To install the dependencies 
+   ```
+   npm install
+   ```
+   This should install the inquirer dependency and create the node_modules directory.
+   
+   The modules are not included as this will be generated when install is run.
+   
+   Video link of running the application
+   [Running Employee Tracker](https://drive.google.com/file/d/1SH5YgHFxdyL_y_kEmlhP0RtAHzL-yzV0/view?usp=sharing)
     
    ## Contribution
-   
-   ## Testing instructions
+   You can fork the repository and create a pull request in order to contribute.
    
    ## Questions
    ### Email:
