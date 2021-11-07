@@ -103,13 +103,7 @@ const delEmplPrompts = [
 ]
 
 function headerText () {
-    //figlet.fonts(function(err,fonts) {
-     //   if (err) {
-      //      return
-       // }
-       // console.dir(fonts);
-    //})
-    console.log(chalk.green(figlet.textSync("EMPLOYEE GENERATOR", {
+    console.log(chalk.green(figlet.textSync("EMPLOYEE TRACKER", {
         font: 'Cybermedium',
         horizontalLayout: 'default',
         verticalLayout: 'default',
@@ -162,7 +156,8 @@ async function addEmployee () {
          first_name: addEmpMenu.first_name,
          last_name: addEmpMenu.last_name,
          role_id: addEmpMenu.role_id,
-         manager_id: addEmpMenu.manager_id
+         manager_id: addEmpMenu.manager_id,
+         logging: false
     });
 }
 
@@ -170,7 +165,8 @@ async function addDepartment () {
     let addDeptMenu = await prompt(deptPrompts);
 
     let addDept = await db.departments.create({
-         name: addDeptMenu.dept_name
+         name: addDeptMenu.dept_name,
+         logging: false
     });
 }
 
@@ -181,6 +177,7 @@ async function addRole () {
          title: addRoleMenu.title_name,
          salary: addRoleMenu.salary,
          department_id: addRoleMenu.dept_id,
+         logging: false
     });
 }
 
@@ -194,21 +191,21 @@ async function updateEmployee() {
             first_name: updateEmplMenu.first_name,
             last_name: updateEmplMenu.last_name
         },
-        logging:false
+        logging: false
     })
 }
 
 async function updateManager() {
     let updateManagerMenu = await prompt(updateManagerPrompts);
-    //update employees role id where matching first and last name 
+    //update manager id where matching first and last name 
     await db.employees.update({
-        role_id: updateManagerMenu.manager_id,
+        manager_id: updateManagerMenu.manager_id,
     },{
         where: { 
             first_name: updateManagerMenu.first_name,
             last_name: updateManagerMenu.last_name
         },
-        logging:false
+        logging: false
     })
 }
 
@@ -219,7 +216,8 @@ async function deleteEmpl() {
         where: {
             first_name: deleteEmplMenu.first_name,
             last_name: deleteEmplMenu.last_name
-        }
+        },
+        logging: false
     })
 }
 
