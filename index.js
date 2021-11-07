@@ -17,15 +17,7 @@ const menuChoices = [
 const mainMenuChoices = [
     { type: "list", name: "main_menu", message: "Choose an option", choices: menuChoices }
 ]
-async function menuArt () {
-    try{
-        let rendered = await art.font("Some Text", 'doom').completed()
-        return rendered
-        //rendered is the ascii
-    }catch(err){
-        //err is an error
-    }
-}
+
 async function mainMenu() {
     let runMenu = true;
     while (runMenu) { 
@@ -75,6 +67,5 @@ function init() {
     mainMenu();
 
 };
-//menuArt();
 db.headerText()
 init();
